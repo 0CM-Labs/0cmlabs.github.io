@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#000000">
-  <meta name="description" content="Deep Android platform services: frameworks, media stacks, migrations, compliance automation, and build system modernization.">
+  <meta name="description" content="0CM Labs services for Android Platform Engineering, AOSP maintenance, CTS/VTS/GTS stabilization, HAL integration, upgrades, performance optimization, and build modernization.">
+  <meta name="keywords" content="Android Platform Engineering, AOSP maintenance, CTS, VTS, GTS, HAL integration, Android upgrade, performance optimization, build modernization, CI test infrastructure">
+  <link rel="canonical" href="https://0cmlabs.github.io/services.html">
   <title>Services | 0cmlabs</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -27,8 +29,8 @@
     <section class="section hero">
       <div class="wrapper">
         <span class="eyebrow">Service Portfolio</span>
-        <h1>Android Native Solutions</h1>
-        <p class="lead">We execute at framework, HAL, and validation layers with deterministic delivery for OEMs, silicon vendors, and platform teams.</p>
+        <h1>Android Platform Engineering Services.</h1>
+        <p class="hero-copy">We work where platform stability, release quality, and hardware integration overlap, with an emphasis on AOSP, HALs, upgrades, validation, and build reliability.</p>
       </div>
     </section>
 
@@ -37,19 +39,41 @@
     <section class="section">
       <div class="wrapper service-stack">
         <article class="service">
-          <h3>AOSP &amp; Native Frameworks</h3>
-          <p>We design and stabilize Android platform internals where correctness, performance, and maintainability must coexist. Typical engagements include Binder-heavy service orchestration, native daemon lifecycle control, JNI boundary hardening, and subsystem-level behavior tuning under strict release timelines.</p>
+          <h3>Android Platform Engineering</h3>
+          <p>We stabilize the core Android stack where framework behavior, native services, and vendor code paths need to work together without surprises.</p>
           <ul>
             <li>Framework architecture and subsystem decomposition</li>
+            <li>Binder IPC interface strategy and reliability tuning</li>
             <li>Native process control and crash-recovery design</li>
             <li>JNI contract hardening and performance profiling</li>
-            <li>Binder IPC interface strategy and reliability tuning</li>
           </ul>
         </article>
 
         <article class="service">
-          <h3>Media Frameworks Specialization</h3>
-          <p>We optimize end-to-end media pipelines for low-latency and high-fidelity behavior across constrained and high-throughput environments. This includes AudioFlinger policy/routing control, AudioTrack buffer dynamics, camera/video path integration, and custom Audio HAL variants aligned to hardware constraints.</p>
+          <h3>AOSP Maintenance &amp; Customization</h3>
+          <p>We adapt AOSP to product requirements while keeping the codebase maintainable, traceable, and safer to upgrade over time.</p>
+          <ul>
+            <li>Framework customization for product-specific behavior</li>
+            <li>System-level tuning for boot, stability, and memory use</li>
+            <li>Long-lived branch maintenance and patch discipline</li>
+            <li>Native bug isolation and reproducible debugging</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <h3>CTS / VTS / GTS Stabilization</h3>
+          <p>We reduce compliance noise by isolating flaky tests, tightening failure triage, and making release validation more predictable.</p>
+          <ul>
+            <li>Test pipeline triage and flake reduction</li>
+            <li>Runtime reduction through smarter orchestration</li>
+            <li>Compliance blocker analysis and remediation</li>
+            <li>Release readiness support for platform teams</li>
+          </ul>
+        </article>
+
+        <article class="service">
+          <h3>HAL &amp; Framework Integration</h3>
+          <p>We handle integration points between Android frameworks and vendor implementations, especially where timing, compatibility, or device-specific behavior is causing friction.</p>
           <ul>
             <li>AudioFlinger and AudioTrack path optimization</li>
             <li>Custom Audio HAL architecture and implementation</li>
@@ -59,8 +83,8 @@
         </article>
 
         <article class="service">
-          <h3>Interface Migrations</h3>
-          <p>We lead large-scale migration programs where interface evolution impacts multiple product lines and partner teams. Our focus is low-risk transitions from HIDL to AIDL while preserving compatibility, limiting integration churn, and ensuring measurable platform stability through staged rollout validation.</p>
+          <h3>Android Upgrade &amp; Migration</h3>
+          <p>We make version jumps safer by reducing interface friction, migration risk, and the cleanup burden that usually follows a large platform bump.</p>
           <ul>
             <li>HIDL-to-AIDL interface transformation strategy</li>
             <li>Cross-team migration sequencing and risk isolation</li>
@@ -70,19 +94,19 @@
         </article>
 
         <article class="service">
-          <h3>Automation &amp; Compliance</h3>
-          <p>We build hardened validation pipelines for CTS, VTS, and GTS at scale, with reliable failure classification and tight feedback loops into platform engineering. Our optimizations have repeatedly delivered dramatic runtime reductions while preserving confidence in release-quality compliance signals.</p>
+          <h3>Performance &amp; Memory Optimization</h3>
+          <p>We identify pressure points that slow the platform down and then remove them at the framework, service, and system level.</p>
           <ul>
-            <li>CTS, VTS, and GTS automation architecture</li>
-            <li>Pipeline parallelization and runtime minimization</li>
-            <li>Flake classification and deterministic rerun policy</li>
-            <li>Release gating and compliance evidence packaging</li>
+            <li>Startup, runtime, and memory churn analysis</li>
+            <li>Constrained-device tuning for Android Go style targets</li>
+            <li>Trace-driven diagnosis for regressions and bottlenecks</li>
+            <li>Practical optimization without overengineering</li>
           </ul>
         </article>
 
         <article class="service">
           <h3>Build Systems Modernization</h3>
-          <p>We modernize legacy Android build surfaces by migrating historical Android.mk logic into hermetic Soong and Android.bp workflows. The goal is reproducibility, cleaner dependency graphs, and maintainable build governance that supports long-lived platform branches.</p>
+          <p>We modernize legacy Android.mk logic into hermetic Soong and Android.bp workflows for cleaner dependency management and easier maintenance.</p>
           <ul>
             <li>Android.mk auditing and migration planning</li>
             <li>Soong and Android.bp refactoring and rollout</li>
@@ -90,6 +114,29 @@
             <li>CI build determinism and long-term maintainability</li>
           </ul>
         </article>
+
+        <article class="service">
+          <h3>CI / Test Infrastructure</h3>
+          <p>We improve engineering feedback loops by making validation systems more deterministic, faster, and easier to trust.</p>
+          <ul>
+            <li>Pipeline parallelization and runtime minimization</li>
+            <li>Automated failure bucketing and rerun policy</li>
+            <li>Release gating and compliance evidence packaging</li>
+            <li>Lab and CI workflow simplification</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrapper">
+        <div class="cta-strip">
+          <p>If you have a platform blocker, upgrade risk, or compliance deadline, we can help map the shortest safe path forward.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="contact.html">Discuss Your Platform Problem</a>
+            <a class="btn btn-secondary" href="contact.html">Schedule Consultation</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
