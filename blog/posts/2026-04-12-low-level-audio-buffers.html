@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Handling High-Frequency Audio Buffers - 0cmlabs engineering note.">
+  <title>Handling High-Frequency Audio Buffers | 0cmlabs</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper header-row">
+      <a class="brand" href="../../index.html">0cmlabs</a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../services.html">Services</a></li>
+          <li><a class="active" href="../index.html">Blog</a></li>
+          <li><a href="../../contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="post">
+    <article class="post-wrap markdown-body">
+      <p class="post-meta">2026-04-12 · Audio Systems</p>
+      <h1 class="post-title">Handling High-Frequency Audio Buffers</h1>
+
+      <p>Engineering note from <strong>0cmlabs</strong>.</p>
+
+      <h2>Scope</h2>
+      <p>This placeholder outlines how we evaluate high-frequency buffer paths in Android audio stacks.</p>
+      <ul>
+        <li>Validate <code>AudioTrack</code> burst cadence under real device clock drift.</li>
+        <li>Keep buffer sizes deterministic per route profile.</li>
+        <li>Separate DSP-offloaded paths from CPU-mixed fallback paths.</li>
+      </ul>
+
+      <h2>Baseline Checklist</h2>
+      <ol>
+        <li>Capture mixer period and HAL frame geometry.</li>
+        <li>Measure underrun rate during thermal and CPU pressure.</li>
+        <li>Compare latency deltas across fast and deep buffer outputs.</li>
+      </ol>
+
+      <h2>Example Snippet</h2>
+      <pre><code class="language-cpp">size_t burst_frames = 240;
+size_t ring_frames = burst_frames * 8;
+configure_output_ring(ring_frames);
+</code></pre>
+
+      <h2>Current Status</h2>
+      <p>Initial analysis complete; full implementation walkthrough will follow in a later revision.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper footer-row">
+      <p class="footer-tagline">Your 1-stop lab for AOSP and Android native engineering challenges.</p>
+      <p class="footer-copy">&copy; 2026 0cmlabs. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

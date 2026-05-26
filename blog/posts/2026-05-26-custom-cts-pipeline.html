@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Custom CTS Pipeline Optimizations - 0cmlabs engineering note.">
+  <title>Custom CTS Pipeline Optimizations | 0cmlabs</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper header-row">
+      <a class="brand" href="../../index.html">0cmlabs</a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../services.html">Services</a></li>
+          <li><a class="active" href="../index.html">Blog</a></li>
+          <li><a href="../../contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="post">
+    <article class="post-wrap markdown-body">
+      <p class="post-meta">2026-05-26 · Compliance Engineering</p>
+      <h1 class="post-title">Custom CTS Pipeline Optimizations</h1>
+
+      <p>Engineering note from <strong>0cmlabs</strong>.</p>
+
+      <h2>Scope</h2>
+      <p>This placeholder captures the backbone of a custom CTS optimization strategy.</p>
+      <ul>
+        <li>Build shards by subsystem ownership rather than raw test count.</li>
+        <li>Detect flaky signatures before rerun budgets are consumed.</li>
+        <li>Preserve reproducibility across lab and CI hardware classes.</li>
+      </ul>
+
+      <h2>Optimization Priorities</h2>
+      <ol>
+        <li>Stable device provisioning with immutable test images.</li>
+        <li>Incremental test selection driven by changed Android modules.</li>
+        <li>Automated failure bucketing for deterministic triage.</li>
+      </ol>
+
+      <h2>Example Snippet</h2>
+      <pre><code class="language-bash">cts-tradefed run cts \
+  --module CtsMediaTestCases \
+  --retry-strategy ITERATIONS \
+  --max-testcase-run-count 2
+</code></pre>
+
+      <h2>Current Status</h2>
+      <p>Pipeline model validated; a deeper architecture writeup is scheduled next.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper footer-row">
+      <p class="footer-tagline">Your 1-stop lab for AOSP and Android native engineering challenges.</p>
+      <p class="footer-copy">&copy; 2026 0cmlabs. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
