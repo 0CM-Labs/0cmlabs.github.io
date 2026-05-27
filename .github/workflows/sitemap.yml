@@ -16,7 +16,7 @@ jobs:
         fetch-depth: 0 
 
     - name: Generate Sitemap
-      url: 'cicirello/generate-sitemap@v1'
+      uses: cicirello/generate-sitemap@v1  # Fixed: Changed 'url' to 'uses'
       with:
         base-url-path: https://0cmlabs.com/
 
