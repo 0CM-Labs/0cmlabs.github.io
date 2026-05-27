@@ -1,0 +1,29 @@
+name: Generate sitemap
+
+on:
+  push:
+    branches:
+      - main # Change this to master if your default branch is named master
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Generate a sitemap
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 
+
+    - name: Generate Sitemap
+      url: 'cicirello/generate-sitemap@v1'
+      with:
+        base-url-path: https://0cmlabs.com/
+
+    - name: Commit and push sitemap
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add sitemap.xml
+        git diff-index --quiet HEAD || git commit -m "Automated sitemap update"
+        git push
